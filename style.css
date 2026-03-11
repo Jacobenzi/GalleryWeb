@@ -63,26 +63,32 @@ background:#111;
 color:white;
 }
 
-.filters{
-text-align:center;
-margin:40px;
+.filters ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.filters button{
-padding:10px 20px;
-margin:5px;
-border:none;
-background:#111;
-color:white;
-border-radius:20px;
-cursor:pointer;
+.filters button {
+  padding: 10px 20px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.filters button:hover{
-background:#444;
+.filters button:hover {
+  background: #444;
+}
 
-.filters button: active{
-background:#c0392b;
+.filters button.active {
+  background: #c0392b; /* Červená pro aktivní tlačítko */
 }
 
 .about{

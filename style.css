@@ -80,6 +80,9 @@ cursor:pointer;
 
 .filters button:hover{
 background:#444;
+
+.filters button: active{
+background:#c0392b;
 }
 
 .about{

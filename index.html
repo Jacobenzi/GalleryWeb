@@ -14,15 +14,18 @@
 <header>
 <h1>Galerie #PLACEHOLDER</h1>
 <p>Aktuální nabídka obrazů k prodeji</p>
-<div class="filters">
 
-<button onclick="filterSelection('all')">Vše</button>
-<button onclick="filterSelection('vysocina')">Vysočina</button>
-<button onclick="filterSelection('cesty')">Cesty po Karibiku, Francii a středomoří</button>
-<button onclick="filterSelection('chrudim')">Chrudim</button>
-<button onclick="filterSelection('artf')">Artflock</button>
+<nav class="filters">
+  <ul>
+    <li><button class="filter-btn active" data-category="all">Vše</button></li>
+    <li><button class="filter-btn" data-category="vysocina">Vysočina</button></li>
+    <li><button class="filter-btn" data-category="cesty">Cesty po Karibiku, Francii a středomoří</button></li>
+    <li><button class="filter-btn" data-category="cesty">Chrudim</button></li>
+    <li><button class="filter-btn" data-category="cesty">Artflock</button></li>
+  </ul>
+</nav>
 
-</div>
+
 </header>
   
 <section class="about">
@@ -71,36 +74,42 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <footer>
 <p>Kontakt: email@email.cz</p>
 </footer>
-
+  
 <script>
+// 1. Výběr prvků z DOM (stránky)
+const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.painting');
 
-filterSelection("all")
-
-function filterSelection(category) {
-  let paintings = document.getElementsByClassName("painting")
-    for (let i = 0; i < paintings.length; i++) {
-      paintings[i].style.display = "none"
-      if (category === "all" || paintings[i].classList.contains(category)) {
-paintings[i].style.display = "block"
-      }
+// 2. Hlavní funkce pro filtrování
+function filterPaintings(category) {
+  galleryItems.forEach(item => {
+    // Pokud je vybráno "vše" nebo se třída shoduje s kategorií
+    if (category === "all" || item.classList.contains(category)) {
+      item.style.display = "block"; // Ukázat
+    } else {
+      item.style.display = "none";  // Schovat
     }
+  });
 }
 
-let buttons = document.querySelectorAll(".filters button");
+// 3. Přidání "posluchačů" na všechna tlačítka
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Získání kategorie z atributu data-category
+    const targetCategory = button.getAttribute('data-category');
 
-buttons.forEach(button => {
+    // Spuštění filtru
+    filterPaintings(targetCategory);
 
-button.addEventListener("click", function(){
-
-buttons.forEach(btn => btn.classList.remove("active"));
-
-this.classList.add("active");
-
+    // Přepnutí aktivní třídy u tlačítek (pro CSS vzhled)
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
 });
 
-});
+// 4. Inicializace - při načtení stránky ukázat vše
+filterPaintings("all");
+</script> 
   
-</script>
-
 </body>
 </html>

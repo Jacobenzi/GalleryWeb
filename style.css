@@ -63,16 +63,18 @@ background:#111;
 color:white;
 }
 
+/* Kontejner pro tlačítka */
 .filters ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  display: flex;           /* Aktivuje flexbox - seřadí položky do řady */
+  flex-wrap: wrap;        /* Pokud se nevejdou na šířku (mobil), skočí na další řádek */
+  justify-content: center; /* Vycentruje tlačítka uprostřed stránky */
+  gap: 10px;              /* Vytvoří mezeru mezi tlačítky */
+  list-style: none;       /* Odstraní tečky seznamu */
+  padding: 0;             /* Odstraní výchozí odsazení seznamu */
+  margin: 20px 0;         /* Mezera nad a pod filtry */
 }
 
+/* Samotná tlačítka (aby vypadala jako v tvém návrhu) */
 .filters button {
   padding: 10px 20px;
   border: none;
@@ -80,15 +82,16 @@ color:white;
   color: white;
   border-radius: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 .filters button:hover {
   background: #444;
 }
 
+/* Styl pro aktivní tlačítko, které JS přepíná */
 .filters button.active {
-  background: #c0392b; /* Červená pro aktivní tlačítko */
+  background: #c0392b; 
 }
 
 .about{

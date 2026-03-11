@@ -11,7 +11,7 @@ color:white;
 }
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,320px));
+grid-template-columns:repeat(auto-fit,minmax(300px, 400px));
 gap:30px;
 padding:40px;
 justify-content:center;
@@ -20,10 +20,10 @@ margin: 0 auto;
 }
 .painting{
 background:white;
-border-radius:12px;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 overflow:hidden;
-max-width:320px;
+max-width:400px;
 margin:auto;
 transition:transform 0.2s ease, box-shadow 0.2s ease;
 }

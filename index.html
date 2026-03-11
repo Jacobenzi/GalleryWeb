@@ -113,7 +113,11 @@ function filterPaintings(category) {
   galleryItems.forEach(item => {
     if (category === "all" || item.classList.contains(category)) {
       item.style.display = "block";
-    } else {
+      item.style.animation = "none";
+    requestAnimationFrame(()=> {
+        item.style.animation = "fadeIn 0.4s ease";
+  });
+ } else {
       item.style.display = "none";
     }
   });

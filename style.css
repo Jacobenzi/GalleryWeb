@@ -11,7 +11,7 @@ color:white;
 }
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(400px, 550px));
+grid-template-columns:repeat(2, 1fr);
 gap:40px;
 padding:40px;
 justify-content:center;
@@ -23,7 +23,7 @@ background:white;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 overflow:hidden;
-max-width:550px;
+width:100%;
 margin:auto;
 transition:transform 0.2s ease, box-shadow 0.2s ease;
 }

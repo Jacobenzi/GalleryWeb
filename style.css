@@ -20,18 +20,16 @@ margin: 0 auto;
 }
 .painting{
 background:white;
-animation: fadeIn 0.4s ease:
-  
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
+animation: fadeIn 0.4s ease;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 overflow:hidden;
 width:100%;
 margin:auto;
 transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .painting:hover{
 transform:translateY(-6px);
@@ -59,7 +57,7 @@ font-size: 0.95rem;
 .price{
 font-weight:bold;
 font-size:24px;
-margin:10px 0 !important;
+margin:10px 0;
 color: #111;
 }
 .price span,

@@ -14,9 +14,11 @@ color:white;
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,320fr));
-gap:40px;
+gap:30px;
 padding:40px;
 justify-content:center;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .painting{

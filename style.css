@@ -16,6 +16,7 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 padding:40px;
+justify-items:center;
 }
 
 .painting{
@@ -24,6 +25,8 @@ padding:20px;
 border-radius:10px;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 text-align:center;
+max-width:350px;
+margin:auto;
 }
 
 .painting img{

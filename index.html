@@ -133,6 +133,7 @@ filterButtons.forEach(button => {
     filterPaintings(targetCategory);
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
+    document.querySelector('.gallery').scrollIntoView({ behavior: 'smooth' });
   });
 });
 

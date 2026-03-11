@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galerie obrazů</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
+  
 <body>
-
 <header>
+  
 <h1>Jaroslav Koreček</h1>
 <p>MALÍŘ • CESTOVATEL • TVŮRCE</p>
-
 <nav class="filters">
   <ul>
     <li><button class="filter-btn active" data-category="all">Vše</button></li>
@@ -24,10 +22,8 @@
     <li><button class="filter-btn" data-category="artf">Artflock</button></li>
   </ul>
 </nav>
-
-
 </header>
-  
+
 <section class="about">
 <h2>O autorovi</h2>
 <div class="about-container">
@@ -36,21 +32,18 @@
 <p>
 Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní příběh a umělecké období
 </p>
-
-
 </div>
 </div>
-
 </section>
-  
+
 <section class="gallery">
 
 <div class="painting vysocina">
 <img src="images/obraz1.jpeg">
 <h3>Mona Lisa</h3>
 <p>Akryl na plátně</p>
-<p class="price">4 500 Kč</p>
-<p class="dimensions">60x70cm</p>
+<p class="dimensions"><span>Rozměry:</span> 60 × 80 cm</p>
+<p class="price"><span>Cena:</span> 4 500 Kč</p>
 <button>Kontaktovat</button>
 </div>
 
@@ -58,7 +51,8 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <img src="images/obraz2.jpeg">
 <h3>Výkřik</h3>
 <p>Olej na plátně</p>
-<p class="price">6 000 Kč</p>
+<p class="dimensions"><span>Rozměry:</span> 50 × 70 cm</p>
+<p class="price"><span>Cena:</span> 6 000 Kč</p>
 <button>Kontaktovat</button>
 </div>
 
@@ -66,7 +60,8 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <img src="images/obraz3.jpeg">
 <h3>Hvězdná obloha</h3>
 <p>Akryl na plátně</p>
-<p class="price">3 900 Kč</p>
+<p class="dimensions"><span>Rozměry:</span> 40 × 60 cm</p>
+<p class="price"><span>Cena:</span> 3 900 Kč</p>
 <button>Kontaktovat</button>
 </div>
 
@@ -74,7 +69,8 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <img src="images/obraz3.jpeg">
 <h3>Hvězdná obloha</h3>
 <p>Akryl na plátně</p>
-<p class="price">3 900 Kč</p>
+<p class="dimensions"><span>Rozměry:</span> 40 × 60 cm</p>
+<p class="price"><span>Cena:</span> 3 900 Kč</p>
 <button>Kontaktovat</button>
 </div>
 
@@ -82,7 +78,8 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <img src="images/obraz3.jpeg">
 <h3>Hvězdná obloha</h3>
 <p>Akryl na plátně</p>
-<p class="price">3 900 Kč</p>
+<p class="dimensions"><span>Rozměry:</span> 40 × 60 cm</p>
+<p class="price"><span>Cena:</span> 3 900 Kč</p>
 <button>Kontaktovat</button>
 </div>
 
@@ -90,51 +87,42 @@ Zde bude napsán stručný text o autorovi Jaroslavu Korečkovi. Jeho životní 
 <img src="images/obraz3.jpeg">
 <h3>Hvězdná obloha</h3>
 <p>Akryl na plátně</p>
-<p class="price">3 900 Kč</p>
+<p class="dimensions"><span>Rozměry:</span> 40 × 60 cm</p>
+<p class="price"><span>Cena:</span> 3 900 Kč</p>
 <button>Kontaktovat</button>
 </div>
-  
+
 </section>
 
 <footer>
 <p>Kontakt: email@email.cz</p>
 </footer>
-  
+
 <script>
-// 1. Výběr prvků z DOM (stránky)
 const filterButtons = document.querySelectorAll('.filter-btn');
 const galleryItems = document.querySelectorAll('.painting');
 
-// 2. Hlavní funkce pro filtrování
 function filterPaintings(category) {
   galleryItems.forEach(item => {
-    // Pokud je vybráno "vše" nebo se třída shoduje s kategorií
     if (category === "all" || item.classList.contains(category)) {
-      item.style.display = "block"; // Ukázat
+      item.style.display = "block";
     } else {
-      item.style.display = "none";  // Schovat
+      item.style.display = "none";
     }
   });
 }
 
-// 3. Přidání "posluchačů" na všechna tlačítka
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Získání kategorie z atributu data-category
     const targetCategory = button.getAttribute('data-category');
-
-    // Spuštění filtru
     filterPaintings(targetCategory);
-
-    // Přepnutí aktivní třídy u tlačítek (pro CSS vzhled)
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
   });
 });
 
-// 4. Inicializace - při načtení stránky ukázat vše
 filterPaintings("all");
-</script> 
-  
+</script>
+
 </body>
 </html>

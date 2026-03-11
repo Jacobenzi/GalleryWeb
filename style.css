@@ -13,7 +13,7 @@ color:white;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,320fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,320px));
 gap:30px;
 padding:40px;
 justify-content:center;

@@ -58,3 +58,22 @@ padding:20px;
 background:#111;
 color:white;
 }
+
+.filters{
+text-align:center;
+margin:40px;
+}
+
+.filters button{
+padding:10px 20px;
+margin:5px;
+border:none;
+background:#111;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.filters button:hover{
+background:#444;
+}

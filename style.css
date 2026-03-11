@@ -143,3 +143,36 @@ max-width:500px;
 font-size:16px;
 line-height:1.6;
 }
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px;
+  }
+  header {
+    padding: 40px 16px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .filters ul {
+    gap: 8px;
+  }
+  .filters button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

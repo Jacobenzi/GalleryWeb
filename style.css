@@ -131,7 +131,7 @@ color:white;
 }
 
 .about-image {
-  flex: 0 0 40%;
+  flex: 0 0 20%;
   position: relative;
   overflow: hidden;
 }

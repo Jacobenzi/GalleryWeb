@@ -11,11 +11,11 @@ color:white;
 }
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px, 400px));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(400px, 550px));
+gap:40px;
 padding:40px;
 justify-content:center;
-max-width: 1200px;
+max-width: 1400px;
 margin: 0 auto;
 }
 .painting{
@@ -23,7 +23,7 @@ background:white;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 overflow:hidden;
-max-width:400px;
+max-width:550px;
 margin:auto;
 transition:transform 0.2s ease, box-shadow 0.2s ease;
 }

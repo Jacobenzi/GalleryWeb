@@ -57,5 +57,21 @@
 <p>Kontakt: email@email.cz</p>
 </footer>
 
+<script>
+
+filterSelection("all")
+
+function filterSelection(category) {
+  let paintings = document.getElementsByClassName("painting")
+    for (let i = 0; i < paintings.length; i++) {
+      paintings[i].style.display = "none"
+      if (category === "all" || paintings[i].classList.contains(category)) {
+paintings[i].style.display = "block"
+      }
+    }
+}
+
+</script>
+
 </body>
 </html>

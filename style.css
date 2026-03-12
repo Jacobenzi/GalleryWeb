@@ -151,7 +151,7 @@ footer a:hover {
 }
 
 .about-image {
-  flex: 0 0 35%;
+  flex: 0 0 25%;
   position: relative;
   overflow: hidden;
 }
@@ -175,7 +175,7 @@ footer a:hover {
 
 .about-text {
   flex: 1;
-  padding: 60px 60px 60px 20px;
+  padding: 30px 40px 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,10 +190,10 @@ footer a:hover {
 }
 
 .about-text p {
-  font-size: 17px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.7;
   color: #333;
-  margin: 0 0 16px;
+  margin: 0 0 10px;
 }
 
 .about-text p:last-child {

@@ -73,26 +73,40 @@ color: #111;
   margin: 4px 0;
 }
 button{
-background:#111;
-color:white;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-border-radius:5px;
-margin-top:10px;
+  background:#111;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  cursor:pointer;
+  border-radius:5px;
+  margin-top:10px;
 }
 button:hover{
-background:#444;
+  background:#444;
 }
 footer{
-text-align:center;
-padding:20px;
-background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+  text-align:center;
+  padding:20px;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
               url('images/background2.PNG');
-background-size: cover;
-background-position: center;
-color:white;
+  background-size: cover;
+  background-position: center;
+  color:white;
 }
+footer h2{
+  font-variant: small-caps;
+  font-size: 2rem;
+  margin: 0 0 10px;
+  letter-spacing: 0.1em;
+}
+footer a {
+  color: #5a3e2b;
+  font-weight: bold;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+} 
 .filters ul {
   display: flex;
   flex-wrap: wrap;

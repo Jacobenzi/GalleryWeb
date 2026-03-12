@@ -107,6 +107,9 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+nav{
+  text-align: center;
+}
 nav button {
   padding: 10px 28px;
   border: 1px solid rgba(255,255,255,0.4);

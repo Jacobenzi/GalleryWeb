@@ -147,7 +147,7 @@ footer a:hover {
 .about-container {
   display: flex;
   align-items: stretch;
-  min-height: 500px;
+  min-height: 350px;
 }
 
 .about-image {

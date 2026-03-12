@@ -72,17 +72,17 @@ color: #111;
   font-size: 0.95rem;
   margin: 4px 0;
 }
-button{
-  background:#111;
-  color:white;
-  border:none;
-  padding:10px 20px;
-  cursor:pointer;
-  border-radius:5px;
-  margin-top:10px;
+.painting-text button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
 }
-button:hover{
-  background:#444;
+.painting-text button:hover {
+  background: #444;
 }
 footer{
   text-align:center;

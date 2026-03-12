@@ -190,6 +190,7 @@ footer a:hover {
 }
 
 .about-text p {
+  text-aling: center;
   font-size: 15px;
   line-height: 1.7;
   color: #333;

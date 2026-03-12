@@ -114,8 +114,6 @@ footer a:hover {
 }
 nav{
   text-align: center;
-}
-.filters{
   display:flex;
   justify-content:center;
 }
